@@ -1,52 +1,22 @@
 const app = Vue.createApp({
   data() {
     return {
-      counter: 0,
-      name: "",
-      fullname: "",
-      lastName: "",
+      BoxASelected: false,
+      BoxBSelected: false,
+      BoxCSelected: false,
     };
   },
-  watch: {
-    name(value) {
-      if (value === "") {
-        this.fullname = "";
-      } else {
-        this.fullname = value + " " + this.lastName;
-      }
-    },
-    lastName(value) {
-      if (value === "") {
-        this.fullname = "";
-      } else {
-        this.fullname = this.name + " " + value;
-      }
-    },
-  },
-  computed: {
-    /* fullname() {
-      if (this.name === "") {
-        return "";
-      }
-      return this.name + " " + "Schwazmuller";
-    },*/
-  },
   methods: {
-    outputFullName() {},
-
-    setName(event) {
-      this.name = event.target.value;
-    },
-    add(num) {
-      this.counter = this.counter + num;
-    },
-    reduce(num) {
-      this.counter = this.counter - num;
-    },
-    resetInput() {
-      this.name = "";
+    boxSelected(box) {
+      if (box === "A") {
+        this.BoxASelected = true;
+      } else if (box === "B") {
+        this.BoxBSelected = true;
+      } else if (box === "C") {
+        this.BoxCSelected = true;
+      }
     },
   },
 });
 
-app.mount("#events");
+app.mount("#styling");
