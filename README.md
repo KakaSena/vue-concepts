@@ -61,3 +61,9 @@ To run any project in this repository:
 ```bash
 git clone https://github.com/KakaSena/vue-concepts.git
 cd vue-concepts
+```
+
+## 📄 License
+
+This repository is licensed under the [MIT License](https://github.com/KakaSena/vue-concepts/blob/main/LICENSE).  
+Feel free to use, share, and modify the code as per your needs.
